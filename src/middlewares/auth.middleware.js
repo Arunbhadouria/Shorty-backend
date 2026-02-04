@@ -1,6 +1,10 @@
 import jwt from "jsonwebtoken";
 import { AppError } from "../utils/AppError.js";
 import User from "../models/User.js";
+import dotenv from "dotenv";
+
+dotenv.config();
+
 
 export const protect = async (req, res, next) => {
   try {
