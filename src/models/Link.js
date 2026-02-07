@@ -15,6 +15,13 @@ const linkSchema = new mongoose.Schema(
       index: true,
     },
 
+    collection: {
+  type: mongoose.Schema.Types.ObjectId,
+  ref: "Collection",
+  default: null,
+},
+
+
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
